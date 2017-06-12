@@ -107,21 +107,6 @@ rule dragos_crashoverride_configReader
         all of them
 }
 
-rule dragos_crashoverride_configReader
-{
-meta:
-description = "CRASHOVERRIDE v1 Config File Parsing"
-author = "Dragos Inc"
-strings:
-$s0 = { 68 e8 ?? ?? ?? 6a 00 e8 a3 ?? ?? ?? 8b f8 83 c4 ?8 }
-$s1 = { 8a 10 3a 11 75 ?? 84 d2 74 12 }
-$s2 = { 33 c0 eb ?? 1b c0 83 c8 ?? }
-$s3 = { 85 c0 75 ?? 8d 95 ?? ?? ?? ?? 8b cf ?? ?? }
-condition:
-all of them
-}
-
- 
 rule dragos_crashoverride_weirdMutex
 {
 meta:
@@ -134,7 +119,7 @@ condition:
 all of them
 }
 
- 
+ 
 rule dragos_crashoverride_serviceStomper
 {
 meta:
@@ -147,7 +132,7 @@ condition:
 all of them
 }
 
- 
+ 
 rule dragos_crashoverride_wiperModuleRegistry
 {
 meta:
@@ -161,7 +146,7 @@ condition:
 all of them
 }
 
- 
+ 
 rule dragos_crashoverride_wiperFileManipulation
 {
 meta:
@@ -173,3 +158,4 @@ $s2 = { 6a 00 50 57 56 53 ff 15 4c ?? ?? ?? 56 }
 condition:
 all of them
 }
+
