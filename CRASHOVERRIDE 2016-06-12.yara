@@ -25,7 +25,7 @@ meta:
 		$s4 = ".cin" fullword nocase wide
 
 	condition:
-		any of ($s*)
+		any of ($s*) and pe.exports("Crash")
 }
 
 
@@ -52,7 +52,7 @@ rule dragos_crashoverride_name_search {
 		$s14 = "haslo.dat" fullword nocase wide
 
 	condition:
-		any of ($s*)
+		any of ($s*) and pe.exports("Crash")
 }
 
 rule dragos_crashoverride_hashes {
