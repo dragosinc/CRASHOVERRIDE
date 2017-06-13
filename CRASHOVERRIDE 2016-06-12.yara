@@ -1,14 +1,14 @@
 import "pe"
 import "hash"
 
-rule dragos_crashoverride_exporting_dlls
+rule dragos_crashoverride_suspicious_export
 {
 	meta:
 		description = "CRASHOVERRIDE v1 Suspicious Export"
 		author = "Dragos Inc"
 
 	condition:
-		pe.exports("Crash") & pe.characteristics
+		pe.exports("Crash")
 }
 
 rule dragos_crashoverride_suspcious
@@ -25,7 +25,7 @@ meta:
 		$s4 = ".cin" fullword nocase wide
 
 	condition:
-		pe.exports("Crash") and any of ($s*)
+		any of ($s*)
 }
 
 
@@ -52,7 +52,7 @@ rule dragos_crashoverride_name_search {
 		$s14 = "haslo.dat" fullword nocase wide
 
 	condition:
-		any of ($s*) and pe.exports("Crash")
+		any of ($s*)
 }
 
 rule dragos_crashoverride_hashes {
