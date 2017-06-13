@@ -3,7 +3,7 @@ Host,Mutex Value,ApiPortection9d3,Mutex value checked,Stage 2: Install,Recon
 Host,Mutex Value,<Blank Value>,Mutex value created,Stage 2: Install,Recon
 Host,File,C:\Users\<Public OR Executing User>\imapi,File dropped and deleted after program exit,Stage 2: Install,Recon
 Host,Service Name,defragsvc,Name given to service start,Stage 2: C2,Remote Access
-Network,IP Address,95.16.88.6,External C2 server [DEC 2016] (likely TOR node at time of attack),Stage 2: C2,Remote Access
+Network,IP Address,195.16.88.6,External C2 server [DEC 2016] (likely TOR node at time of attack),Stage 2: C2,Remote Access
 Network,IP Address,93.115.27.57,External C2 server [DEC 2016] (likely TOR node at time of attack),Stage 2: C2,Remote Access
 Network,IP Address,5.39.218.152,External C2 server [DEC 2016] (likely TOR node at time of attack),Stage 2: C2,Remote Access
 Network,User Agent String,Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.1),Default user agent string used in C2 if unable to get system default user agent string,Stage 2: C2,Remote Access
