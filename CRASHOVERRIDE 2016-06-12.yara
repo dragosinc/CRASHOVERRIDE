@@ -162,3 +162,31 @@ rule crashoverride_wiperFileManipulation
 	condition:
 		all of them
 }
+
+rule crashoverride_socketCreationArtifacts
+{
+	meta:
+		description = "Socket and connection creation functionality"
+		author = "Dragos Inc"
+	
+	strings:
+		$s0 = { c7 85 ?? fe ff ff 02 00 00 00 c7 85 ?? fe ff ff 01 00 00 00 c7 85 ?? fe ff ff 06 00 00 00 ff 15 ?? 91 01 10 }
+		$s1 = { 6a 04 ?? ?? ?? fe ff ff 8d 85 ?? fe ff ff 50 68 06 10 00 68 ff ff 00 00 57 ff 15 ?? ?? ?? 01 10 }
+		
+	condition:
+		all of them
+}
+
+rule crashoverride_finalCountdownToWiper
+{
+	meta:
+		description = "Countdown to wiper module loading"
+		author = "Dragos Inc"
+	
+	strings:
+		$s0 = { 68 80 ee 36 00 ff ?? ?? ?? 40 00 68 e8 09 41 00 ff  ?? ?? ?? 40 00 85 c0 }
+		$s1 = { 68 fc 09 41 00 50 ff ?? ?? ?? 40 00 85 c0 74 07 6a 00 ff d0 83 c4 04 }
+	
+	condition:
+		all of them
+}
