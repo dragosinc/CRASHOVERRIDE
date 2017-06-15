@@ -1,5 +1,5 @@
 ﻿TYPE,SUBTYPE,IOC,Description,ICS Kill Chain,Impact
-Host,Mutex Value,ApiPortection9d3,Mutex value checked,Stage 2: Install,Recon
+Host,Mutex Value,ApiPortection[a-z0-9]{3},Mutex value checked,Stage 2: Install,Recon
 Host,Mutex Value,<Blank Value>,Mutex value created,Stage 2: Install,Recon
 Host,File,C:\Users\<Public OR Executing User>\imapi,File dropped and deleted after program exit,Stage 2: Install,Recon
 Host,Service Name,defragsvc,Name given to service start,Stage 2: C2,Remote Access
